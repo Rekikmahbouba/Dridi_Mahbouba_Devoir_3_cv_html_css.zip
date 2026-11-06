@@ -9,10 +9,157 @@
     url(/assets/fonts/Raleway-Italic.ttf) format(truetype);
 }
 
+*{
+    box-sizing: border-box;
+}
+
 body{
+    max-width: 1160px;
+    margin: 0 auto;
+    background-color: #f3f3f3;
     font-family: "raleway", sans-serif;
 }
 
-h1{
+main{
+    margin: 0 auto;
+    /* auto pour faire apparaItre la couleur grise du body a gche et a dte DONC UN CONTENU CENTRé */
+    background-color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    }
+
+.colonne-gauche{
+    width:25%;
+    background-color: #e3e3e3;
+    padding: 15px;
+ }
+.colonne-droite{
+    width: 75%;
+    background-color: #ffffff;
+    padding: 15px;
+}
+.blue{
+    color: #17abb3;
+}
+header{
+    background-color: #17abb3;
+    color: #ffffff;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    gap: 5rem;
+    padding: 25px 0;
+}
+
+h1, h2, h3{
     font-family: "lato", sans-serif;
+    margin: 0 auto;
+}
+
+.h{
+   color: #17abb3; 
+   margin: 10px 0;
+}
+ header a img{
+    width: 10rem;
+    height: 10rem;
+    border-radius: 50%;
+    border: 4px solid #ffffff;
+    object-fit: cover;
+    cursor: zoom-in;
+} 
+
+address img{
+    width: 1rem;
+    height:1rem;
+}
+
+address{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 0.5rem;
+}
+
+a{
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.identite{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.adresse{
+    margin-top: 10px;
+}
+
+p{
+    text-indent: 1rem;
+    text-align: justify;
+}
+
+.etoile{
+    color: #17abb3;
+}
+
+ul li::before{
+    content: none;
+}
+
+ul li::marker{
+    color: #17abb3;
+}
+
+ul{
+    list-style-type: square;
+}
+
+.flex-col{
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.espacement{
+    display: grid;
+    grid-template-columns:  1fr auto;
+    /*auto fait les dates décalés à droite */
+}
+.espacement:hover{
+    background-color: #f5f5f5;
+    border-left: 5px solid #17abb3;
+}
+.colle{
+    display: flex;
+    flex-direction: column;
+}
+
+.espaceflex{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+footer{
+    background-color: #17abb3;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px 0;
+}
+
+footer a img{
+    width: 1rem;
+    height:1rem;
+}
+
+footer img:hover{
+    opacity: 0.5;
+}
+small{
+    font-style: italic;
 }
